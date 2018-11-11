@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{fancyhdr,booktabs}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\usepackage{citesort}
+
+\begin{document}
+
+\section{Introduction}
+\section{Analysis and Simulation}
+\subsection{non-relativistic system}
+As discussed in \cite{}, the non-relativistic equations of motion are:
+\begin{equation}
+	11
+\end{equation}
+\subsection{relativistic system}
+Taking relativity into consideration, given the momentum $\vec{k}$, the forces are given by (see Appendix for the derivation) :
+\begin{equation}
+	F_{//}=\int_S \frac{P(x) +P_f \cos (2\beta) }{c} dS 
+\end{equation}
+\begin{equation}
+	F_{\perp}=\int_S \frac{P_f \sin (2\beta)}{c} dS \\
+\end{equation}
+$F_{//}$ is the component parallel to the momentum and $F_\perp$ is the component perpendicular to the momentum.
+$P_f$ is given by:
+\begin{equation}
+	P_f=\frac{P(x) \sqrt{m^2c^4+|\vec{k}|^2c^2 } - P(x)|\vec{k}|c \cos(\alpha- \beta) }{P(x)dt (1-\cos(1\beta)) +\sqrt{m^2c^4+|\vec{k}|^2c^2 } + |\vec{k}|c \cos(\alpha- \beta) }
+\end{equation}
+
+where $\alpha$ is the angle between $\vec{k}$ and $\hat{n}$, $\beta$ is the angle between $\hat{b}$ and $\hat{n}$ and $P(\vec x)$ is the power flux at location $\vec x$
+
+Then with the relativistic definition of momentum:
+\begin{equation}
+	\vec k = \frac{m \vec v}{\sqrt{1-v^2/c^2}}
+\end{equation}
+\begin{equation}
+	\vec{F} = \frac{d \vec k}{dt}
+\end{equation}
+we have the relativistic equation of motion. 
+
+\subsection{simulation result}
+We use relativistic equations to perform numerical simulations, as shown in Fig \ref{sim1}. From the data, the craft could reach desired velocity in 819.1 seconds. Parameters of this system are set as listed in Table. \ref{par1}, some of the parameters are defined in Chapter 3.
+
+\begin{table}[!htb]
+	\centering
+	\label{par1}
+	\caption{Parameters set in Simulation 1}
+	\begin{tabular}{lllllll}
+		\toprule
+		m	&S	&$\alpha$	&$x_0$	&$y_0$	&$\sigma_P$	&$\sigma_b$\\
+		\midrule
+		10g	&10$m^2$	&0	&0	&0	&1.25m	&0
+		
+	\end{tabular}
+\end{table}
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=12cm]{simu.png}
+	
+	\caption{velocity evolution. The velocity reaches 60860120.67 m/s at 819.1 seconds}
+	\label{sim1}
+\end{figure}
+
+
+\section{Marginal Error}
+	In order for the craft to hit Proxima b within earth-moon distance, the deviation of velocity should satisfy following criteria:
+	\begin{itemize}
+		\item Direction: the direction should be within angle that 2 earth-moon distance has at 4.365 light year (distance from earth to Proxima). 
+		\item Amplitude: the time required to reach Proxima b at the speed should not lag or lead the desired value to much so that the craft misses the planet due to revolution around Promixa. 
+	\end{itemize}
+	Therefore, we have :
+	\begin{equation}
+		\Delta \theta \le \frac{2*d_{earth-moon}}{4.365 l.y.}
+	\end{equation}
+	\begin{equation}
+		\frac{4.365l.y.}{v_0}- \frac{4.365l.y.}{v_0+\Delta v}\le \frac{2d_{earth-moon}}{2\pi a} T
+	\end{equation}
+	where $d_{earth-moon}$ is the distance between earth and the moon, $v_0$ is 0.2 light speed as desired, a is the semi latus rectum of the Proxima b's orbit and T is the period of the orbit.
+	
+	So the marginal error in the velocity is:
+	\begin{equation}
+		\Delta \theta \le 1.862 \times 10^{-8} rad
+		\,\,\,\,\,\,\,
+		\Delta v \le 4.58 \times 10^{-7} c
+	\end{equation}
+	where c is light speed.
+	
+	In order to satisfy this strict constraint, the system should be carefully calibrated. Here we list the parameters we choose to quantify the system:
+	\begin{itemize}
+		\item Accuracy of beam array: central position of power flux distribution $(x, y)$
+		\item Precision of beam array: Gaussian variance of the power flux distribution $\sigma$
+		\item Fabrication of the light sail: The area $S$ and the conic angle $\alpha$
+		\item Uniformity of the laser beam: the Gaussian variance of $\vec{b}$, $\sigma_b$
+	\end{itemize}
+	
+	In the simulation discussed in last section, we perturb the parameters listed above by a small amount and observe the resulted velocity, which are then used to calculated partial derivatives. The velocity evolution of several perturbed cases are shown in Figure. \ref{label}. The results of derivations and marginal errors are listed in Table. \ref{pd}
+	
+	\begin{figure}[]
+		\centering
+		\includegraphics[width=12cm]{pert.png}
+		\includegraphics[width=12cm]{pertang.png}
+		
+		\caption{evolution of different perturbations on velocity amplitude and angle}
+		\label{sim1}
+	\end{figure}
+	
+		\begin{table}[!htb]
+		\centering
+		\label{pd}
+		\caption{Partial derivatives and marginal errors}
+		\begin{tabular}{llllllllllll}
+			\toprule
+			$\frac{\partial v}{\partial x}$ &$\frac{\partial v}{\partial y}$ &$\frac{\partial v}{\partial \sigma}$ &$\frac{\partial v}{\partial \alpha}$ &$\frac{\partial v}{\partial S}$ &$\frac{\partial v}{\partial \sigma_b}$& $\frac{\partial \theta}{\partial x}$ &$\frac{\partial \theta}{\partial y}$ &$\frac{\partial \theta}{\partial \sigma}$ &$\frac{\partial \theta}{\partial \alpha}$ &$\frac{\partial \theta}{\partial S}$ &$\frac{\partial \theta}{\partial \sigma_b}$	\\
+			\midrule
+			1.8e4 &	-2e7	& 15.0	& 0.8	&30.0	& -1.0 &0&0		\\
+			\bottomrule
+		\end{tabular}
+
+	\end{table}
+	
+\end{document}
