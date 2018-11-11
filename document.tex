@@ -12,10 +12,39 @@
 \section{Introduction}
 \section{Analysis and Simulation}
 \subsection{non-relativistic system}
-As discussed in \cite{}, the non-relativistic equations of motion are:
+
+A sketch graph is shown at Fig.1,as discussed in \cite{},the non-relativistic equations of motion are:
+\begin{align}
+\boldsymbol{F} &= \int_S 2\frac{P( \boldsymbol{x'})\hat{\boldsymbol{b}}\cdot\hat{\boldsymbol{n}}(\boldsymbol{x'})}{c}\cdot\hat{\boldsymbol{n}}dS \\
+\boldsymbol{F} &= m\boldsymbol{\ddot{x}}
+\end{align}
+where $\boldsymbol{F}$ is total force of sail, $m$ is mass of sail, $S$ is surface of sail, $P$ is power flux of laser beam, $\boldsymbol{x'}$ is position of laser reflection point, $\boldsymbol{x}$ is position of mass center of sail, $\hat{\boldsymbol{b}}$ is unit vector along the beam, $\hat{\boldsymbol{n}}$ is unit vector perpendicular to the reflection surface\\
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=0.3]{scheme.png}
+	\caption{sketch graph of sail,coordinate $Oxyz$ is static with laser beam and $O'\rho\gamma h$ is along with sail}
+\end{figure}
+in the coordinate $O'\rho\gamma h$,the value of $\hat{\boldsymbol{n}}$ is:
 \begin{equation}
-	11
+\hat{\boldsymbol{n}} = 
+\begin{pmatrix}
+&cos\alpha sin\phi +sin\alpha cos\gamma cos\phi\\
+&sin\alpha sin\gamma\\
+&cos\alpha cos\gamma - sin\alpha cos\gamma sin\phi
+\end{pmatrix}
 \end{equation}
+By some geometric tricks, the reflection point is(along with $Oxyz$):
+\begin{equation}
+\boldsymbol{x} = \boldsymbol{x'} + 
+\begin{pmatrix}
+&\rho sin\alpha\\
+&\rho cos\gamma\cos\phi -(\frac{H}{2}-\rho tan\alpha)sin\phi\\
+&\rho cos\alpha sin\phi + (\frac{H}{2}-\rho tan\alpha)\cos\phi
+\end{pmatrix}
+\end{equation}
+where:$\alpha$ is inclinate angle of sail and$H$ is height of sail\\
+
+
 \subsection{relativistic system}
 Taking relativity into consideration, given the momentum $\vec{k}$, the forces are given by (see Appendix for the derivation) :
 \begin{equation}
@@ -97,15 +126,15 @@ We use relativistic equations to perform numerical simulations, as shown in Fig 
 		\item Uniformity of the laser beam: the Gaussian variance of $\vec{b}$, $\sigma_b$
 	\end{itemize}
 	
-	In the simulation discussed in last section, we perturb the parameters listed above by a small amount and observe the resulted velocity, which are then used to calculated partial derivatives. The velocity evolution of several perturbed cases are shown in Figure. \ref{label}. The results of derivations and marginal errors are listed in Table. \ref{pd}
+	In the simulation discussed in last section, we perturb the parameters listed above by a small amount and observe the resulted velocity, which are then used to calculated partial derivatives. The velocity evolution of several perturbed cases are shown in Figure. \ref{pert}. The results of derivations and marginal errors are listed in Table. \ref{pd}
 	
 	\begin{figure}[]
 		\centering
 		\includegraphics[width=12cm]{pert.png}
 		\includegraphics[width=12cm]{pertang.png}
 		
-		\caption{evolution of different perturbations on velocity amplitude and angle}
-		\label{sim1}
+		\caption{evolution of velocity amplitude and angle  after different perturbations}
+		\label{pert}
 	\end{figure}
 	
 		\begin{table}[!htb]
@@ -116,7 +145,7 @@ We use relativistic equations to perform numerical simulations, as shown in Fig 
 			\toprule
 			$\frac{\partial v}{\partial x}$ &$\frac{\partial v}{\partial y}$ &$\frac{\partial v}{\partial \sigma}$ &$\frac{\partial v}{\partial \alpha}$ &$\frac{\partial v}{\partial S}$ &$\frac{\partial v}{\partial \sigma_b}$& $\frac{\partial \theta}{\partial x}$ &$\frac{\partial \theta}{\partial y}$ &$\frac{\partial \theta}{\partial \sigma}$ &$\frac{\partial \theta}{\partial \alpha}$ &$\frac{\partial \theta}{\partial S}$ &$\frac{\partial \theta}{\partial \sigma_b}$	\\
 			\midrule
-			1.8e4 &	-2e7	& 15.0	& 0.8	&30.0	& -1.0 &0&0		\\
+			1.8e4 &	-2e7	& 1.6e11	& 3.3e15	&1.2e15	& 1.5e15 &0&0	&0 &4.96 &1.5	&1.8	\\
 			\bottomrule
 		\end{tabular}
 

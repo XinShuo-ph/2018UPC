@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.11)  11 NOV 2018 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.2.11)  11 NOV 2018 19:27
 entering extended mode
 **./document.tex
 (document.tex
@@ -178,11 +178,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \@minsofar=\count107
 \@min=\count108
 \@cite@temp=\count109
-) (document.aux
-
-LaTeX Warning: Label `sim1' multiply defined.
-
-)
+) (document.aux)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -197,7 +193,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count110
 \scratchdimen=\dimen135
@@ -292,74 +289,80 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+<scheme.png, id=1, 872.25874pt x 717.68124pt>
+File: scheme.png Graphic file (type png)
+<use scheme.png>
+Package pdftex.def Info: scheme.png  used on input line 24. on input line 24.
+Package pdftex.def Info: Requested size: 261.67964pt x 215.30603pt on input lin
+e 24.
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+[1
+
+{C:/Users/HP/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./scheme.png>]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 60.
+               Default added (so using `tbp') on input line 89.
 
-<simu.png, id=1, 433.62pt x 289.08pt>
+<simu.png, id=18, 433.62pt x 289.08pt>
 File: simu.png Graphic file (type png)
 <use simu.png>
-Package pdftex.def Info: simu.png  used on input line 62. on input line 62.
+Package pdftex.def Info: simu.png  used on input line 91. on input line 91.
 Package pdftex.def Info: Requested size: 341.43306pt x 227.63405pt on input lin
-e 62.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
+e 91.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
- [1
-
-{C:/Users/HP/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./simu.png
->]
-
-LaTeX Warning: Reference `label' on page 3 undefined on input line 100.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+ [2] [3 <./simu.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 102.
+               Default added (so using `tbp') on input line 131.
 
-<pert.png, id=19, 433.62pt x 289.08pt>
+<pert.png, id=27, 578.16pt x 289.08pt>
 File: pert.png Graphic file (type png)
 <use pert.png>
-Package pdftex.def Info: pert.png  used on input line 104. on input line 104.
-Package pdftex.def Info: Requested size: 341.43306pt x 227.63405pt on input lin
-e 104.
-<pertang.png, id=20, 433.62pt x 289.08pt>
+Package pdftex.def Info: pert.png  used on input line 133. on input line 133.
+Package pdftex.def Info: Requested size: 341.43306pt x 170.71451pt on input lin
+e 133.
+<pertang.png, id=28, 578.16pt x 289.08pt>
 File: pertang.png Graphic file (type png)
 <use pertang.png>
-Package pdftex.def Info: pertang.png  used on input line 105. on input line 105
+Package pdftex.def Info: pertang.png  used on input line 134. on input line 134
 .
-Package pdftex.def Info: Requested size: 341.43306pt x 227.63405pt on input lin
-e 105.
-[3] [4 <./pert.png> <./pertang.png>] (document.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+Package pdftex.def Info: Requested size: 341.43306pt x 170.71451pt on input lin
+e 134.
+[4 <./pert.png> <./pertang.png>] (document.aux) ) 
 Here is how much of TeX's memory you used:
- 2810 strings out of 493312
- 38299 string characters out of 3138908
- 109091 words of memory out of 3000000
- 6322 multiletter control sequences out of 15000+200000
- 5612 words of font info for 21 fonts, out of 3000000 for 9000
+ 2831 strings out of 493312
+ 38529 string characters out of 3138908
+ 109060 words of memory out of 3000000
+ 6334 multiletter control sequences out of 15000+200000
+ 8061 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,43p,482b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (4 pages, 146957 bytes).
+ 41i,14n,43p,482b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cmextra/cmbsy7.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb>
+Output written on document.pdf (4 pages, 214387 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
