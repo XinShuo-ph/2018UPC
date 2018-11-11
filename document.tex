@@ -186,5 +186,51 @@ We use relativistic equations to perform numerical simulations, namely integrati
 \bibliographystyle{plain}
 \section{Appendix}
 \subsection{Relativistic consideration}
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=12cm]{dyn.png}
+	\caption{sketch of the photon pressure}
+	\label{dyn}
+\end{figure}
+As shown in Fig. \ref{dyn}, we consider the collision between a photon and the light sail. With 4-momentum conservation (here natural unit is used, c=1):
+\begin{equation}
+	E_0+\sqrt{m^2+p_0^2} = E_f + \sqrt{m^2+p_x^2+p_y^2}
+\end{equation}
+\begin{equation}
+	E_0+p_0\cos(\alpha-\theta) = -E_f \cos(2\theta) +p_x
+\end{equation}
+\begin{equation}
+	p_0 \sin (\alpha-\theta) = E_f \sin(2\theta) + p_y
+\end{equation}
+
+With some algebraic derivation, we can solve $E_f,\, p_x,\, p_y$:
+
+\begin{equation}
+	E_f= \frac{E_0\sqrt{m^2+p_0^2} - E_0 p \cos (\alpha -\theta ) }{E_0-E_0 \cos(2\theta) + p_0 \cos (\alpha+\theta) +\sqrt{m^2+p_0^2} }
+\end{equation}
+
+\begin{equation}
+p_x-p_0\cos(\alpha-\theta) = E_0+ E_f \cos(2\theta)
+\label{f1}
+\end{equation}
+
+\begin{equation}
+	p_y-p_0\sin (\alpha-\theta) = -E_f \sin(2\theta)
+	\label{f2}
+\end{equation}
+
+Replace the $E_0$ with the laser power in (\ref{f1}) and (\ref{f2}) and recover the light speed in SI unit. We have the expression of force(here $\beta$ replaces $\theta$):
+\begin{equation}
+F_{//}=\int_S \frac{P(x) +P_f \cos (2\beta) }{c} dS 
+\end{equation}
+\begin{equation}
+F_{\perp}=\int_S \frac{P_f \sin (2\beta)}{c} dS \\
+\end{equation}
+$F_{//}$ is the component parallel to the momentum and $F_\perp$ is the component perpendicular to the momentum.
+$P_f$ is given by:
+\begin{equation}
+P_f=\frac{P(x) \sqrt{m^2c^4+|\vec{k}|^2c^2 } - P(x)|\vec{k}|c \cos(\alpha- \beta) }{P(x)dt (1-\cos(1\beta)) +\sqrt{m^2c^4+|\vec{k}|^2c^2 } + |\vec{k}|c \cos(\alpha- \beta) }
+\end{equation}
+
 
 \end{document}
