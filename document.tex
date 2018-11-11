@@ -7,9 +7,30 @@
 \usepackage{geometry}
 \usepackage{citesort}
 
+
 \begin{document}
+\title{Can We Build the Light Sail for the Travel to Proxima b?}
+\author{Team 335}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+	A potentially habitable planet, Proxima b, was found in 2016 and sending spacecraft for scientific research for this planet has been discussed in the past two years. Using ground-based laser beam array to power a light sail into space is one promising project. In this paper, we discussed the relativistic dynamics during the acceleration stage and performed several numerical simulations. We choose several parameters to characterize accuracy, precision and uniformity of laser array, as well as engineering details of the light sail. In order to hit the planet within earth-moon distance from Solar-Proxima distance (4.365 light year), the constraints on the parameters are unbelievably strict. In conclusion, it's extremely hard to build the proper light sail and establish the laser array within required accuracy.
+\end{abstract}
+
 
 \section{Introduction}
+
+Proxima b, a planet discovered in 2016, orbits the nearest star from our sun, Proxima, every 11 days. After the discovery, several projects for performing scientific research on the planet are proposed. However, due to long interstellar distance, even though Proxima is the nearest star from us, it would take up to 100 years to reach the planet with traditional spacecraft.  
+
+Solar sail, a type of space craft using light pressure provided by luminous objects, such as a star and optical devices. Recently a new conception of interstellar solar sail has been proposed, i.e. using laser array on the ground to accelerate a micro space craft which is a few gram of mass. Such a space craft could reach high velocity in a few minutes and an interstellar voyage might be realized.
+
+The stability of the dynamics in acceleration stage is considered in \cite{stab}. Their conclusion is conic shaped sail is stable in the acceleration dynamics. Therefore we also use conic sail in our simulation. The deceleration of the craft at Proxima system is considered in \cite{dec}. The light pressure of the stars in Alpha Centauri system can be used to decelerate the craft so that the payload can even land on the planet other than flyby at high speed.
+
+There's still some problems unsolved because of long distance from . First, the accuracy and precision of the laser beam should be high so that the light spot can aim at the sail from ground. Second, the precision should be even higher to reach exactly the desired velocity, otherwise the craft might miss the Proxima b. Theoretically the laser beam is Gaussian, the optimized standard division $\sigma$ should be considered. An additional problem is the uniformity of laser beam, a small deviation of angles between different beams in the array could cause similar problems.
+
+We consider both Newtonian and relativistic condition, maximize the standard devision of Gaussian beam. We also care about the accuracy and the maximum error of laser beam array's direction are given. We consider the uniformity as a random Gaussian perturbation in laser's unit direction vector and the minimum uniformity are founded.
+
 \section{Analysis and Simulation}
 \subsection{non-relativistic system}
 
@@ -42,7 +63,7 @@ By some geometric tricks, the reflection point is(along with $Oxyz$):
 &\rho cos\alpha sin\phi + (\frac{H}{2}-\rho tan\alpha)\cos\phi
 \end{pmatrix}
 \end{equation}
-where:$\alpha$ is inclinate angle of sail and$H$ is height of sail\\
+where:$\alpha$ is inclination angle of sail and $H$ is height of sail\\
 
 
 \subsection{relativistic system}
@@ -71,7 +92,7 @@ Then with the relativistic definition of momentum:
 we have the relativistic equation of motion. 
 
 \subsection{simulation result}
-We use relativistic equations to perform numerical simulations, as shown in Fig \ref{sim1}. From the data, the craft could reach desired velocity in 819.1 seconds. Parameters of this system are set as listed in Table. \ref{par1}, some of the parameters are defined in Chapter 3.
+We use relativistic equations to perform numerical simulations, namely integrating the first order ODE (reduced from second order by doubling variants) with RK4(5) method. The result is shown in Fig \ref{sim1}. From the data, the craft could reach desired velocity in 819.1 seconds. Parameters of this system are set as listed in Table. \ref{par1}, some of the parameters are defined in Chapter 3.
 
 \begin{table}[!htb]
 	\centering
@@ -81,7 +102,8 @@ We use relativistic equations to perform numerical simulations, as shown in Fig 
 		\toprule
 		m	&S	&$\alpha$	&$x_0$	&$y_0$	&$\sigma_P$	&$\sigma_b$\\
 		\midrule
-		10g	&10$m^2$	&0	&0	&0	&1.25m	&0
+		10g	&10$m^2$	&0	&0	&0	&1.25m	&0\\
+		\bottomrule
 		
 	\end{tabular}
 \end{table}
@@ -148,7 +170,21 @@ We use relativistic equations to perform numerical simulations, as shown in Fig 
 			1.8e4 &	-2e7	& 1.6e11	& 3.3e15	&1.2e15	& 1.5e15 &0&0	&0 &4.96 &1.5	&1.8	\\
 			\bottomrule
 		\end{tabular}
-
+		\begin{tabular}{llllll}
+			\\
+			\toprule
+			$\Delta x$ & $\Delta y$ & $\Delta \sigma$ & $\Delta \alpha$ & $\Delta S$ & $\Delta \sigma_b$ \\
+			\midrule
+			2.54e-11m	&2.29e-15m	&2.16e-18m	&1.39e-21 rad	&3.81e-21$m^2$	&3.05e-21	\\
+			\bottomrule
+		\end{tabular}
 	\end{table}
 	
+	In conclusion, the marginal error required by the system is unbelievably small. The location of the ground beam should be kept at atomic scale. The collimation of the beam should also be carefully calibrated to desired variance. The uniformity between different beams in the array should be strict so that the angle between different laser beam should be at scale of $10^{-21}$ rad. As for the fabrication, the error of the conic angle should be within $10^{-21}$ rad and error of area should be within $10^{-21}\,\,m^2$. However, if the payload is equipped with certain instrument that could actively adjust to the perturbation, the result might be better.
+	
+\bibliography{cit}
+\bibliographystyle{plain}
+\section{Appendix}
+\subsection{Relativistic consideration}
+
 \end{document}
